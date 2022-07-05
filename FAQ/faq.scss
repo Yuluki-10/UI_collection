@@ -50,7 +50,7 @@
         height: 24px;
         position: absolute;
         right: 16px;
-        background: url(icon/arrow-pc.svg) center center no-repeat;
+        background: url(../img/arrow-pc.svg) center center no-repeat;
         transition: transform 0.5s;
     }
 }
@@ -82,7 +82,7 @@
     .faq__q::after {
         width: 32px;
         height: 12px;
-        background: url(icon/arrow.svg) center center no-repeat;
+        background: url(../img/arrow.svg) center center no-repeat;
     }
     .faq__q::before {
         font-size: 18px;

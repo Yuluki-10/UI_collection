@@ -26,7 +26,7 @@
 .faq__item.-appear .faq__a {
   -webkit-transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
   transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
-  max-height: 200px;
+  max-height: 500px;
   padding-top: 22px;
   padding-bottom: 18px;
   padding-left: 14px;
@@ -34,6 +34,10 @@
 }
 
 .faq__q {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -45,12 +49,6 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.faq__q::before {
-  content: "Q. ";
-  color: #ff8349;
-  font-size: 26px;
-  margin: 0 20px;
 }
 .faq__q::after {
   content: "";
@@ -66,6 +64,12 @@
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.faq__q .faq__q-item {
+  color: #ff8349;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 20px;
 }
 
 .faq__a {
@@ -93,10 +97,6 @@
   font-weight: 700;
   margin: 0 20px;
 }
-.faq__a .faq__a-text {
-  letter-spacing: 0.8px;
-  margin-bottom: 0;
-}
 
 @media screen and (max-width: 991px) {
   .faq {
@@ -112,15 +112,15 @@
   .faq__item.-appear .faq__a {
     -webkit-transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
     transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
-    max-height: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 10px 20px;
   }
 
   .faq__q {
-    padding: 10px 20px 10px 0;
+    padding: 10px 20px;
+  }
+  .faq__q .faq__q-item {
+    font-size: 1.3rem;
+    margin: 0 10px 0 0;
   }
 
   .faq__q::after {
@@ -130,15 +130,8 @@
     background: url(../img/arrow.svg) center center no-repeat;
   }
 
-  .faq__q::before {
-    font-size: 18px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 30px;
-  }
-
   .faq__a .faq__a-item {
-    font-size: 1rem;
-    margin: 0 3px 0 0;
+    font-size: 1.3rem;
+    margin: 0 10px 0 0;
   }
 }

@@ -23,7 +23,7 @@
     }
     .faq__a {
       transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
-      max-height: 200px;
+      max-height: 500px;
       padding-top: 22px;
       padding-bottom: 18px;
       padding-left: 14px;
@@ -33,17 +33,12 @@
 }
 
 .faq__q {
+  display: flex;
   cursor: pointer;
   user-select: none;
   position: relative;
   padding: 22px 14px 18px;
   align-items: center;
-  &::before {
-    content: "Q. ";
-    color: #ff8349;
-    font-size: 26px;
-    margin: 0 20px;
-  }
   &::after {
     content: "";
     width: 64px;
@@ -54,6 +49,12 @@
     right: 16px;
     background: url(../img/arrow-pc.svg) center center no-repeat;
     transition: transform 0.5s;
+  }
+  .faq__q-item {
+    color: #ff8349;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 20px;
   }
 }
 
@@ -72,10 +73,6 @@
     font-weight: 700;
     margin: 0 20px;
   }
-  .faq__a-text {
-    letter-spacing: 0.8px;
-    margin-bottom: 0;
-  }
 }
 
 @media screen and (max-width: 991px) {
@@ -90,16 +87,16 @@
     &.-appear {
       .faq__a {
         transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
-        max-height: 200px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 10px 20px;
       }
     }
   }
   .faq__q {
-    padding: 10px 20px 10px 0;
+    padding: 10px 20px;
+    .faq__q-item {
+      font-size: 1.3rem;
+      margin: 0 10px 0 0;
+    }
   }
   .faq__q::after {
     width: 14px;
@@ -107,16 +104,11 @@
     right: 5px;
     background: url(../img/arrow.svg) center center no-repeat;
   }
-  .faq__q::before {
-    font-size: 18px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 30px;
-  }
+  
   .faq__a {
     .faq__a-item {
-      font-size: 1rem;
-      margin: 0 3px 0 0;
+      font-size: 1.3rem;
+      margin: 0 10px 0 0;
     }
   }
 }

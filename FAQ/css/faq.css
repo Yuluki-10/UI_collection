@@ -4,6 +4,55 @@
   max-width: 1190px;
 }
 
+/* headline */
+.headline {
+  margin-bottom: 40px;
+}
+.headline .headline__min {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 17px;
+  line-height: 1.2;
+  letter-spacing: 0.8px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.headline .headline__min::before {
+  content: "";
+  width: 14px;
+  height: 3.5px;
+  margin-right: 10px;
+  background: #3dcfd4;
+}
+.headline.--center .headline__min {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.headline .headline__item {
+  font-size: 27px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+.headline .headline__item.--bold {
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+.headline.--center .headline__item {
+  text-align: center;
+}
+
 /* faqセクション */
 .faq__section {
   padding-bottom: 100px;

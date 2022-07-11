@@ -28,7 +28,7 @@
   width: 14px;
   height: 3.5px;
   margin-right: 10px;
-  background: #3dcfd4;
+  background: #FFD52C;
 }
 .headline.--center .headline__min {
   -webkit-box-pack: center;
@@ -57,7 +57,7 @@
 .faq__section {
   padding-bottom: 100px;
   padding-top: 100px;
-  background-color: #f5f6f7;
+  background-color: #f5f5f5;
 }
 
 .faq__item {
@@ -120,7 +120,7 @@
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .faq__q .faq__q-item {
-  color: #ff8349;
+  color: #FF812C;
   font-size: 26px;
   font-weight: 700;
   margin: 0 20px;
@@ -146,7 +146,7 @@
   overflow: hidden;
 }
 .faq__a .faq__a-item {
-  color: #6249ff;
+  color: #2A5CAA;
   font-size: 26px;
   font-weight: 700;
   margin: 0 20px;

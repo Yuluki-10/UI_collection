@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* コンテナ */
 .container {
   margin-inline: auto;
   max-width: 1190px;
@@ -152,6 +153,7 @@
   margin: 0 20px;
 }
 
+/* メディアクエリ */
 @media screen and (max-width: 991px) {
   .faq {
     padding-top: 46px;

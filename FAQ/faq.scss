@@ -4,7 +4,7 @@ $main: #2A5CAA; //瑠璃色
 $accent-1: #FF812C; //補色1
 $accent-2: #FFD52C; //補色2
 
-// コンテナ
+/* コンテナ */
 .container {
   margin-inline: auto;
   max-width: 1190px;
@@ -127,6 +127,7 @@ $accent-2: #FFD52C; //補色2
   }
 }
 
+/* メディアクエリ */
 @media screen and (max-width: 991px) {
   .faq {
     padding-top: 46px;

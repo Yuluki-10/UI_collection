@@ -20,6 +20,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 1; /*HTMLでmodalとmaskが逆転しても良いように念の為*/
 }
 
 #modal {
@@ -34,8 +35,18 @@ body {
   right: 0;
   /* margin: 0 auto; */
   margin-inline: auto;
+  transition: transform 0.4s;
+  z-index: 2; /*HTMLでmodalとmaskが逆転しても良いように念の為*/
 }
 
 #modal > p {
   margin: 0 0 20px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -500px);
 }

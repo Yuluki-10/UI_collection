@@ -3,22 +3,28 @@
 /*----------------------------------------------------------*/
 main.contents{
   background-color: #E2F2EF;
+  letter-spacing: 0.08em;
 }
 
 .container{
   max-width: 1120px;
+  padding-top: 20px;
   margin-inline: auto;
   width: 90%;
 }
 
 /* タイトル */
 .title{
-  padding: 40px 0;
+  padding: 30px 0;
+  margin-bottom: 20px;
+  background-color: #fff;
   &.--center{
     text-align: center;
   }
   h2.title__item{
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #007e69;
   }
 }
 
@@ -34,7 +40,7 @@ main.contents{
     text-align: center;
   }
   h3.headline__item{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     // color: #fff;
   }
 }
@@ -44,12 +50,16 @@ main.contents{
 /*----------------------------------------------------------*/
 article.terms{
   padding-bottom: 50px;
-  .terms__item{
+  article.terms__item{
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     border-top-style: none;
     padding-bottom: 20px; /*over-flowのためのポイント*/
+    .terms__document{
+      height: 70vh;
+      overflow-y: scroll;
+    }
   }
 }
 
@@ -67,6 +77,10 @@ article.privacy{
   article.policy{
     border-radius: 4px 4px 0 0 ;
     border-bottom-style: none;
+    .policy__document{
+      height: 30vh;
+      overflow-y: scroll;
+    }
   }
   article.treatment{
     border-radius: 0 0 4px 4px;
@@ -74,6 +88,8 @@ article.privacy{
       border-radius: 0;
     }
     .treatment__document{
+      height: 30vh;
+      overflow-y: scroll;
     }
   }
 }

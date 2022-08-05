@@ -2,9 +2,76 @@
 /*----------------------------------------------------------*/
 /* 共通設定 */
 /*----------------------------------------------------------*/
+main.contents {
+  background-color: #E2F2EF;
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: auto;
+  width: 90%;
+}
+
+/* タイトル */
+.title {
+  padding: 40px 0;
+}
+.title.--center {
+  text-align: center;
+}
+.title h2.title__item {
+  font-size: 2rem;
+}
+
+/* ヘッドライン */
+.headline {
+  background-color: #FFF9EE;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  padding: 10px 0;
+}
+.headline.--center {
+  text-align: center;
+}
+.headline h3.headline__item {
+  font-size: 1.75rem;
+}
+
 /*----------------------------------------------------------*/
 /* 利用規約 */
 /*----------------------------------------------------------*/
+article.terms {
+  padding-bottom: 50px;
+}
+article.terms .terms__item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-top-style: none;
+  padding-bottom: 20px; /*over-flowのためのポイント*/
+}
+
 /*----------------------------------------------------------*/
 /* プライバシーポリシー */
 /*----------------------------------------------------------*/
+article.privacy {
+  padding-bottom: 50px;
+}
+article.privacy article.treatment, article.privacy article.policy {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-style: none;
+  padding-bottom: 20px; /*over-flowのためのポイント*/
+}
+article.privacy article.policy {
+  border-radius: 4px 4px 0 0;
+  border-bottom-style: none;
+}
+article.privacy article.treatment {
+  border-radius: 0 0 4px 4px;
+}
+article.privacy article.treatment .headline {
+  border-radius: 0;
+}

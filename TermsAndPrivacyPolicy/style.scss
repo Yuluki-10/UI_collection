@@ -23,6 +23,11 @@ main.contents{
   width: 90%;
 }
 
+span.--highlight{
+  background: linear-gradient(transparent 60%, #eeec50 60%);
+  font-weight: 700;
+}
+
 /* タイトル */
 .title{
   padding: 30px 0;

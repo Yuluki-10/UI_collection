@@ -145,7 +145,37 @@ article.privacy{
   }
 }
 
-@media screen and (max-width: 640px){
+/* Tabサイズ */
+@media screen and (max-width: 959px){
+  // __document内のp,ol,ul,tableは全て font-size: 0.8rem;
+  article.terms{
+    .terms__document{
+      p, ol, ul, table{
+        font-size: 0.8rem;
+      }
+    }
+  }
+  article.privacy{
+    article.policy{
+      .policy__document{
+        p, ol, ul, table{
+          font-size: 0.8rem;
+        }
+      }
+    }
+    article.treatment{
+      .treatment__document{
+        p, ol, ul, table{
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+  }
+}
+
+/* spサイズ */
+@media screen and (max-width: 519px){
   article.privacy{
     article.treatment{
       .treatment__document{
@@ -156,6 +186,7 @@ article.privacy{
           th, td {
             display: block;
             width: 100%;
+            border: none;
           }
           td.--left{
             width: 100%;

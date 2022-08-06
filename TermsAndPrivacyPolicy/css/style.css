@@ -147,13 +147,27 @@ article.privacy article.treatment .treatment__document p.--right {
   text-align: right;
 }
 
-@media screen and (max-width: 640px) {
+/* Tabサイズ */
+@media screen and (max-width: 959px) {
+  article.terms .terms__document p, article.terms .terms__document ol, article.terms .terms__document ul, article.terms .terms__document table {
+    font-size: 0.8rem;
+  }
+  article.privacy article.policy .policy__document p, article.privacy article.policy .policy__document ol, article.privacy article.policy .policy__document ul, article.privacy article.policy .policy__document table {
+    font-size: 0.8rem;
+  }
+  article.privacy article.treatment .treatment__document p, article.privacy article.treatment .treatment__document ol, article.privacy article.treatment .treatment__document ul, article.privacy article.treatment .treatment__document table {
+    font-size: 0.8rem;
+  }
+}
+/* spサイズ */
+@media screen and (max-width: 519px) {
   article.privacy article.treatment .treatment__document table thead > tr > th {
     display: none;
   }
   article.privacy article.treatment .treatment__document table th, article.privacy article.treatment .treatment__document table td {
     display: block;
     width: 100%;
+    border: none;
   }
   article.privacy article.treatment .treatment__document table td.--left {
     width: 100%;

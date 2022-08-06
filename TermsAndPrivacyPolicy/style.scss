@@ -70,6 +70,7 @@ article.terms{
       height: 70vh;
       overflow-y: scroll;
       padding: 40px;
+      line-height: 1.5;
     }
   }
 }
@@ -89,8 +90,13 @@ article.privacy{
     border-radius: 4px 4px 0 0 ;
     border-bottom-style: none;
     .policy__document{
-      height: 30vh;
+      height: 60vh;
       overflow-y: scroll;
+      line-height: 1.5;
+      padding: 40px;
+      p.--right{
+        text-align: right;
+      }
     }
   }
   article.treatment{
@@ -99,8 +105,60 @@ article.privacy{
       border-radius: 0;
     }
     .treatment__document{
-      height: 30vh;
+      height: 60vh;
       overflow-y: scroll;
+      line-height: 1.5;
+      padding: 40px;
+      table {
+        width: 100%;
+        border: solid 2px #555;
+        border-collapse: collapse;
+        thead > tr > th {
+          border-bottom: 2px solid #999;
+          white-space: nowrap;
+          text-align: center;
+        }
+        th, td {
+          border: 1px solid #bbb;
+          padding: 2px 8px 0;
+          text-align: left;
+          p.--indent-1{
+            padding-left: 1rem;
+            text-indent: -1rem;
+          }
+        }
+        td.--left{
+          width: 50%;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+      p.--right{
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+  article.privacy{
+    article.treatment{
+      .treatment__document{
+        table {
+          thead > tr > th {
+            display: none;
+          }
+          th, td {
+            display: block;
+            width: 100%;
+          }
+          td.--left{
+            width: 100%;
+            background-color: #007e69;
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }

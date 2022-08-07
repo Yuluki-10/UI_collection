@@ -13,8 +13,24 @@ ol li::before {
 }
 
 main.contents {
-  background-color: #E2F2EF;
+  background-color: #e2f2ef;
   letter-spacing: 0.08em;
+}
+main.contents h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 20px 0;
+}
+main.contents h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main.contents p,
+main.contents ol,
+main.contents li,
+main.contents table {
+  margin-bottom: 10px;
 }
 
 .container {
@@ -31,6 +47,10 @@ span.--highlight {
   font-weight: 700;
 }
 
+br.tab-br, br.sp-br {
+  display: none;
+}
+
 /* タイトル */
 .title {
   padding: 30px 0;
@@ -42,18 +62,18 @@ span.--highlight {
 }
 .title h2.title__item {
   font-size: 1.75rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #007e69;
 }
 
 /* ヘッドライン */
 .headline {
-  background-color: #FFF9EE;
-  font-weight: bold;
+  background-color: #fff9ee;
+  font-weight: 700;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   border-radius: 4px 4px 0 0;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .headline.--center {
   text-align: center;
@@ -88,7 +108,8 @@ article.terms article.terms__item .terms__document {
 article.privacy {
   padding-bottom: 50px;
 }
-article.privacy article.treatment, article.privacy article.policy {
+article.privacy article.treatment,
+article.privacy article.policy {
   background-color: #fff;
   border: 1px solid #ccc;
   border-top-style: none;
@@ -104,7 +125,7 @@ article.privacy article.policy .policy__document {
   line-height: 1.5;
   padding: 40px;
 }
-article.privacy article.policy .policy__document p.--right {
+article.privacy article.policy .policy__document p.--sign {
   text-align: right;
 }
 article.privacy article.treatment {
@@ -125,16 +146,19 @@ article.privacy article.treatment .treatment__document table {
   border-collapse: collapse;
 }
 article.privacy article.treatment .treatment__document table thead > tr > th {
-  border-bottom: 2px solid #999;
   white-space: nowrap;
   text-align: center;
+  background-color: #007e69;
+  color: #fff;
 }
-article.privacy article.treatment .treatment__document table th, article.privacy article.treatment .treatment__document table td {
+article.privacy article.treatment .treatment__document table th,
+article.privacy article.treatment .treatment__document table td {
   border: 1px solid #bbb;
-  padding: 2px 8px 0;
+  padding: 5px 8px;
   text-align: left;
 }
-article.privacy article.treatment .treatment__document table th p.--indent-1, article.privacy article.treatment .treatment__document table td p.--indent-1 {
+article.privacy article.treatment .treatment__document table th p.--indent-1,
+article.privacy article.treatment .treatment__document table td p.--indent-1 {
   padding-left: 1rem;
   text-indent: -1rem;
 }
@@ -143,28 +167,80 @@ article.privacy article.treatment .treatment__document table td.--left {
   text-align: center;
   vertical-align: middle;
 }
-article.privacy article.treatment .treatment__document p.--right {
+article.privacy article.treatment .treatment__document p.--sign {
   text-align: right;
 }
 
 /* Tabサイズ */
 @media screen and (max-width: 959px) {
-  article.terms .terms__document p, article.terms .terms__document ol, article.terms .terms__document ul, article.terms .terms__document table {
+  main.contents h4 {
+    font-size: 1.1rem;
+  }
+  main.contents h5 {
+    font-size: 0.9rem;
+  }
+  br.tab-br {
+    display: block;
+  }
+  /* タイトル */
+  .title {
+    padding: 20px 0;
+    margin-bottom: 10px;
+  }
+  .title h2.title__item {
+    font-size: 1.5rem;
+  }
+  /* ヘッドライン */
+  .headline {
+    padding: 10px 0;
+  }
+  .headline h3.headline__item {
+    font-size: 1.25rem;
+  }
+  article.terms .terms__document p,
+article.terms .terms__document ol,
+article.terms .terms__document ul,
+article.terms .terms__document table {
     font-size: 0.8rem;
   }
-  article.privacy article.policy .policy__document p, article.privacy article.policy .policy__document ol, article.privacy article.policy .policy__document ul, article.privacy article.policy .policy__document table {
+  article.privacy article.policy .policy__document p,
+article.privacy article.policy .policy__document ol,
+article.privacy article.policy .policy__document ul,
+article.privacy article.policy .policy__document table {
     font-size: 0.8rem;
   }
-  article.privacy article.treatment .treatment__document p, article.privacy article.treatment .treatment__document ol, article.privacy article.treatment .treatment__document ul, article.privacy article.treatment .treatment__document table {
+  article.privacy article.treatment .treatment__document p,
+article.privacy article.treatment .treatment__document ol,
+article.privacy article.treatment .treatment__document ul,
+article.privacy article.treatment .treatment__document table {
     font-size: 0.8rem;
   }
 }
 /* spサイズ */
 @media screen and (max-width: 519px) {
+  br.sp-br {
+    display: block;
+  }
+  p.--sign {
+    text-align: center;
+  }
+  article.terms article.terms__item .terms__document {
+    padding: 20px;
+  }
+  article.privacy article.policy .policy__document {
+    padding: 20px;
+  }
+  article.privacy article.policy .policy__document p.--sign {
+    text-align: center;
+  }
+  article.privacy article.treatment .treatment__document {
+    padding: 20px;
+  }
   article.privacy article.treatment .treatment__document table thead > tr > th {
     display: none;
   }
-  article.privacy article.treatment .treatment__document table th, article.privacy article.treatment .treatment__document table td {
+  article.privacy article.treatment .treatment__document table th,
+article.privacy article.treatment .treatment__document table td {
     display: block;
     width: 100%;
     border: none;
@@ -173,5 +249,8 @@ article.privacy article.treatment .treatment__document p.--right {
     width: 100%;
     background-color: #007e69;
     color: #fff;
+  }
+  article.privacy article.treatment .treatment__document p.--sign {
+    text-align: center;
   }
 }

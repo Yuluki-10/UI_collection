@@ -7,3 +7,22 @@
 /* =================================
   メインコンテンツ
 ================================= */
+.main-content em {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(80%, #ffd52c));
+  background: -webkit-linear-gradient(transparent 30%, #ffd52c 80%);
+  background: linear-gradient(transparent 30%, #ffd52c 80%);
+  font-style: normal; /* italicから変更 */
+}
+.main-content img {
+  display: block;
+}
+.main-content__link {
+  text-align: center;
+  margin: 1rem;
+}
+.main-content__link a.link-btn {
+  background-color: #2a5caa;
+  color: #fff;
+  padding: 12px 45px;
+  border-radius: 30px;
+}

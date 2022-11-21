@@ -17,9 +17,52 @@
   <!-- メインコンテンツ -->
   <main>
     <!-- サイドバー -->
-    <aside class="sidebar"></aside>
-    <!-- コンテンツ -->
-    <article class="main-contents"></article>
+    <aside class="sidebar">
+      <a href="#" class="sidebar__item">Topページ</a>
+      <a href="#" class="sidebar__item">Myページ</a>
+      <a href="#" class="sidebar__item">学習の方法</a>
+      <a href="#" class="sidebar__item">ヘルプ</a>
+    </aside>
+    <!-- コンテンツエリア -->
+    <article class="main-content">
+      <!-- パンくずリスト -->
+      <div class="breadcrumbs">
+        パンくず > パンくず
+      </div>
+      <!-- メインコンテンツをコンテナで囲む -->
+      <div class="container">
+        <!-- ここからメインコンテンツ -->
+        <h1>チャプタータイトル</h1> <!-- railsの場合は<%= markdown(@chapter.chapter_title) %> -->
+        <!-- 以下、railsの場合<%= markdown(@chapter.content) %>で置き換え -->
+        <p>概要。Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur.</p>
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#toc-1">Adobe Premire Pro</a></li>
+          <li><a href="#toc-2">poipoi poipoi 2</a></li>
+          <li><a href="#">poipoi poipoi poipoi</a></li>
+          <li><a href="#">poipoi poipoi poipoi</a></li>
+          <li><a href="#">練習問題</a></li>
+        </ol>
+        <h2 id="toc-1">Adobe Premire Pro</h2>
+        <p>
+          テキストの装飾。<strong>太字（**囲う**）</strong>。<em>em強調（*囲う*）はこのようにハイライトにした</em>。<strong><em>太字+ハイライト（***囲う***）</em></strong>
+        </p>
+        <ul>
+          <li>リスト=================================</li>
+          <li>リスト=================================</li>
+          <li>リスト=================================</li>
+          <li>リスト=================================</li>
+        </ul>
+        <img src="./ume.jpg" alt="画像">
+        <div class="main-content__link">
+          <a href="" class="link-btn">デザインリンクボタン ▶︎ </a>
+        </div>
+        <h2 id="toc-2">poipoi poipoi 2</h2>
+      </div>
+    </article>
   </main>
   <!-- フッター -->
   <footer></footer>

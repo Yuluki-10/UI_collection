@@ -2,27 +2,114 @@
 /* =================================
   共通設定
 ================================= */
+/* <main>
+--------------------------------- */
+main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* サイドバー
 --------------------------------- */
+aside.sidebar {
+  background-color: #797979;
+  width: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* パンくずリスト
+--------------------------------- */
+.breadcrumbs {
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* container
+--------------------------------- */
+.container {
+  padding: 20px 35px;
+  margin: 0 auto;
+}
+
 /* =================================
   メインコンテンツ
 ================================= */
+.main-content {
+  font-size: 16px; /* 全体のフォントサイズ基準 */
+  width: 80%;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+}
+.main-content h1 {
+  background-color: #008080;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: 900;
+}
+.main-content h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  border-left: #008080 solid 10px;
+  border-bottom: #008080 solid 5px;
+  padding-left: 20px;
+}
+.main-content a {
+  color: #4183c4;
+}
+.main-content a:hover {
+  text-decoration: underline;
+}
+.main-content ol {
+  margin: 1rem;
+  padding: 1rem;
+  list-style: decimal;
+}
+.main-content ul {
+  margin: 1rem;
+  padding: 1rem;
+  list-style: disc;
+}
+.main-content p {
+  font-size: 1em;
+}
 .main-content em {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(80%, #ffd52c));
-  background: -webkit-linear-gradient(transparent 30%, #ffd52c 80%);
-  background: linear-gradient(transparent 30%, #ffd52c 80%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(80%, #FFAA00));
+  background: -webkit-linear-gradient(transparent 30%, #FFAA00 80%);
+  background: linear-gradient(transparent 30%, #FFAA00 80%);
   font-style: normal; /* italicから変更 */
 }
 .main-content img {
   display: block;
+  max-width: 80%;
+  margin: 0 auto;
 }
 .main-content__link {
   text-align: center;
-  margin: 1rem;
+  margin: 1em;
 }
 .main-content__link a.link-btn {
-  background-color: #2a5caa;
+  font-size: 1.2em;
+  font-weight: 900;
+  background-color: #008080;
   color: #fff;
   padding: 12px 45px;
   border-radius: 30px;
+}
+.main-content__link a.link-btn:hover {
+  color: #008080;
+  background-color: #fff;
+  border: #008080 5px solid;
+  text-decoration: none;
 }

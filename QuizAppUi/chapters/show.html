@@ -81,6 +81,27 @@
 
         <h3>コード</h3>
 
+        <p>
+          <code>puts "hogehoge"</code>
+          インラインコード
+        </p>
+
+        <div class="highlight">
+          <pre class="highlight ruby">
+            <code>
+class ChaptersController < ApplicationController
+  before_action :authenticate_user!
+
+  # GET) 「チャプター」作成ページ
+  def new
+    @training = Training.find(params[:training_id])
+    @chapter = Chapter.new
+  end
+end
+            </code>
+          </pre>
+        </div>
+
         <h3>コールアウト</h3>
         <div class="main-content__callouts">
           <h4>コールアウト（ヒントとか）</h4>

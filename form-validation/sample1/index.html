@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ベーシックサンプル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="content">
+    <form name="myForm" class="validationForm" novalidate>
+      <div>
+        <label for="name">名前 </label>
+        <input class="required maxlength" data-maxlength="10" type="text" name="name" id="name">
+      </div>
+      <div>
+        <label for="tel">電話番号 </label>
+        <input class="tel" type="tel" name="tel" id="tel">
+      </div>
+      <div>
+        <label for="email1">メールアドレス </label>
+        <input class="required email" type="email" id="email1" name="email1" size="30">
+      </div>
+      <div>
+        <label for="email2">メールアドレス 再入力（確認用）</label>
+        <input class="required equal-to" data-equal-to="email1" type="email" id="email2" name="email2" size="30">
+      </div>
+      <div>
+        <label for="subject">件名</label>
+        <input type="text" class="required maxlength" data-maxlength="20" id="subject" name="subject">
+      </div>
+      <div>
+        <label for="inquiry">お問い合わせ内容</label>
+        <textarea class="required maxlength" data-maxlength="100" name="inquiry" id="inquiry" rows="5"
+          cols="50"></textarea>
+      </div>
+      <button name="send">送信</button>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
